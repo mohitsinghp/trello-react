@@ -52,7 +52,7 @@ const listsReducer = (state = initialState, action) => {
             }
         case CONSTANTS.ADD_LIST:
             const newList = {
-                title: action.payload,
+                title: action.payload.title,
                 cards: [],
                 id: `list-${listID}`
             }

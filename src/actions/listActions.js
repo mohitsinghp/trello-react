@@ -1,10 +1,13 @@
 import { CONSTANTS } from "./";
 import axios from 'axios';
 
-export const addList = title => {
+export const addList = (title,state) => {
     return {
         type: CONSTANTS.ADD_LIST,
-        payload: title
+        payload: {
+            title,
+            state
+        }
     };
 };
 
