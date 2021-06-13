@@ -38,7 +38,8 @@ class App extends React.Component {
     }
 
     render() {
-        const { lists } = this.props;
+        console.log(this.props.id);
+        const lists = this.props.lists;
         return (
             <div className="App">
                 <Nav />
@@ -65,8 +66,12 @@ class App extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({
-    lists: state.lists
-})
+const mapStateToProps = state => {
+    console.log(state.data);
+    return {
+        lists: state.data.list,
+        id: state.data.id
+    }
+};
 
 export default connect(mapStateToProps)(App);

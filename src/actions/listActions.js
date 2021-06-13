@@ -33,5 +33,5 @@ export const getTrelloList = async (dispatch, getState) => {
     const response = await axios.get('http://localhost:3001/');
 
     localStorage.setItem('TrelloListID', response.data[0]._id);
-    dispatch({ type: CONSTANTS.GET_LIST, payload: response.data[0].list });
+    dispatch({ type: CONSTANTS.GET_LIST, payload: response.data[0] });
 };
