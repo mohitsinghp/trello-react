@@ -5,7 +5,7 @@ import Icon from '@material-ui/core/Icon'
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import {removeList } from '../actions';
+import { removeList } from '../actions';
 
 const ListContainer = styled.div`
     background-color: #dfe3e6;
